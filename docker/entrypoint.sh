@@ -26,16 +26,15 @@ fi
 mkdir -p storage bootstrap/cache \
     storage/framework/cache/data storage/framework/sessions storage/framework/testing storage/framework/views storage/logs \
     database
-if [ -f database/database.sqlite ]; then
-    touch database/database.sqlite
-else
-    touch database/database.sqlite
-fi
+touch database/database.sqlite
 
 # Default session driver to file if not provided
 if ! grep -q "^SESSION_DRIVER=" .env; then
     echo "SESSION_DRIVER=file" >> .env
 fi
+
+# Run migrations to ensure sessions table exists when using sqlite
+php artisan migrate --force || true
 
 # Optimize caches
 php artisan config:clear || true
