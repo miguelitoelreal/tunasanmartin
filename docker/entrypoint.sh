@@ -22,9 +22,20 @@ if ! grep -q "^APP_KEY=" .env || [ -z "$(grep '^APP_KEY=' .env | cut -d= -f2)" ]
     php artisan key:generate --force
 fi
 
-# Ensure writable dirs
+# Ensure writable dirs and sqlite file
 mkdir -p storage bootstrap/cache \
-    storage/framework/cache/data storage/framework/sessions storage/framework/testing storage/framework/views storage/logs
+    storage/framework/cache/data storage/framework/sessions storage/framework/testing storage/framework/views storage/logs \
+    database
+if [ -f database/database.sqlite ]; then
+    touch database/database.sqlite
+else
+    touch database/database.sqlite
+fi
+
+# Default session driver to file if not provided
+if ! grep -q "^SESSION_DRIVER=" .env; then
+    echo "SESSION_DRIVER=file" >> .env
+fi
 
 # Optimize caches
 php artisan config:clear || true
