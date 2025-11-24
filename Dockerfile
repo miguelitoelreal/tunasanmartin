@@ -10,9 +10,8 @@ RUN npm run build
 # ---------- Composer build for PHP deps ----------
 FROM composer:2 AS composer-builder
 WORKDIR /app
-COPY composer.json composer.lock ./
-RUN composer install --no-dev --optimize-autoloader --no-interaction --no-progress --no-suggest
 COPY . .
+RUN composer install --no-dev --optimize-autoloader --no-interaction --no-progress --no-suggest --no-scripts
 RUN composer dump-autoload --optimize --no-dev
 
 # ---------- Runtime ----------
