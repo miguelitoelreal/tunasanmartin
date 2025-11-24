@@ -22,6 +22,10 @@ if ! grep -q "^APP_KEY=" .env || [ -z "$(grep '^APP_KEY=' .env | cut -d= -f2)" ]
     php artisan key:generate --force
 fi
 
+# Ensure writable dirs
+mkdir -p storage bootstrap/cache \
+    storage/framework/cache/data storage/framework/sessions storage/framework/testing storage/framework/views storage/logs
+
 # Optimize caches
 php artisan config:clear || true
 php artisan optimize || true
