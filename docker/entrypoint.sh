@@ -33,11 +33,15 @@ if ! grep -q "^SESSION_DRIVER=" .env; then
     echo "SESSION_DRIVER=file" >> .env
 fi
 
-# Default APP_ENV/DEBUG to production/off if not set
-if ! grep -q "^APP_ENV=" .env; then
+# Force APP_ENV/DEBUG to production
+if grep -q "^APP_ENV=" .env; then
+    sed -i "s|^APP_ENV=.*|APP_ENV=production|" .env
+else
     echo "APP_ENV=production" >> .env
 fi
-if ! grep -q "^APP_DEBUG=" .env; then
+if grep -q "^APP_DEBUG=" .env; then
+    sed -i "s|^APP_DEBUG=.*|APP_DEBUG=false|" .env
+else
     echo "APP_DEBUG=false" >> .env
 fi
 
