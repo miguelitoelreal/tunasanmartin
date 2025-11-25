@@ -74,39 +74,34 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Count-up animation when visible
+    // Count-up animation (run once on load)
     if (counters.length) {
-        const startCounter = (el) => {
-            const target = parseInt(el.dataset.count || '0', 10);
-            if (!target || target <= 0) return;
-            const duration = 1500;
-            const start = performance.now();
+        const animateCounters = () => {
+            counters.forEach((el) => {
+                const target = parseInt(el.dataset.count || '0', 10);
+                if (!target || target <= 0) return;
+                const duration = 1500;
+                const start = performance.now();
 
-            const tick = (now) => {
-                const progress = Math.min((now - start) / duration, 1);
-                const value = Math.floor(progress * target);
-                el.textContent = `+${value}`;
-                if (progress < 1) {
-                    requestAnimationFrame(tick);
-                } else {
-                    el.textContent = `+${target}`;
-                }
-            };
-            requestAnimationFrame(tick);
+                const tick = (now) => {
+                    const progress = Math.min((now - start) / duration, 1);
+                    const value = Math.floor(progress * target);
+                    el.textContent = `+${value}`;
+                    if (progress < 1) {
+                        requestAnimationFrame(tick);
+                    } else {
+                        el.textContent = `+${target}`;
+                    }
+                };
+
+                requestAnimationFrame(tick);
+            });
         };
 
-        const counterObserver = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        startCounter(entry.target);
-                        counterObserver.unobserve(entry.target);
-                    }
-                });
-            },
-            { threshold: 0.2 }
-        );
-
-        counters.forEach((el) => counterObserver.observe(el));
+        if (document.readyState === 'complete') {
+            animateCounters();
+        } else {
+            window.addEventListener('load', animateCounters);
+        }
     }
 });
