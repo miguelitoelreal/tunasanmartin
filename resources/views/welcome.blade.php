@@ -197,6 +197,58 @@
                     </div>
                 </section>
 
+                <section class="section" id="cronica">
+                    <div class="section__head">
+                        <div>
+                            <div class="section__eyebrow">Crónica morada</div>
+                            <h2 class="section__title">Historia y legado</h2>
+                        </div>
+                        <span class="pill">Desde 1979 · Los Morados</span>
+                    </div>
+                    <div class="grid grid--2">
+                        <div class="panel" data-animate>
+                            <h3 class="panel__title">Inicios y creación</h3>
+                            <p class="panel__desc">
+                                Nacimos el 30 de agosto de 1979 en la casona de Derecho (San Isidro) con diez estudiantes que
+                                quisieron llevar el espíritu universitario a través de música, canto y romance. Con los años,
+                                la Tuna USMP se consolidó como agrupación representativa del género en Perú.
+                            </p>
+                        </div>
+                        <div class="panel" data-animate>
+                            <h3 class="panel__title">Misión y espíritu</h3>
+                            <p class="panel__desc">
+                                Embajadores culturales de la USMP y del Perú, llevamos alegría y música al mundo con capa
+                                morada y escudo blanco. Somos alegres, solidarios y divertidos, fieles al nombre “Los Morados”.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid grid--3" style="margin-top:16px;">
+                        <div class="panel" data-animate>
+                            <h4 class="panel__title">Logros y reconocimientos</h4>
+                            <ul class="panel__desc" style="padding-left:16px; margin:8px 0 0; line-height:1.6;">
+                                <li>Diploma de honor del Congreso (abril 2024) por 45 años de aporte cultural.</li>
+                                <li>Única tuna en Perú y Sudamérica con licencia “Marca País Perú”.</li>
+                                <li>Reconocida como “Embajadora Cultural Permanente” de la USMP.</li>
+                            </ul>
+                        </div>
+                        <div class="panel" data-animate>
+                            <h4 class="panel__title">Participación en eventos</h4>
+                            <ul class="panel__desc" style="padding-left:16px; margin:8px 0 0; line-height:1.6;">
+                                <li>Homenaje al Papa Francisco (visita al Perú, 2018).</li>
+                                <li>Primera tuna peruana en temporadas de zarzuela en Lima (2006-2008).</li>
+                                <li>Certamen de la Universidad de Lima (2000).</li>
+                            </ul>
+                        </div>
+                        <div class="panel" data-animate>
+                            <h4 class="panel__title">Publicaciones</h4>
+                            <p class="panel__desc" style="margin:8px 0 0; line-height:1.6;">
+                                Libro “Codex Tunantescum, 30 años de Buen Tunar”, una crónica de vivencias y
+                                aprendizajes de la Tuna de Fray Escoba.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
                 <section class="section" id="historia">
                     <div class="section__head">
                         <div>
