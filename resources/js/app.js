@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const animated = document.querySelectorAll('[data-animate]');
     const progressBar = document.querySelector('[data-scroll-progress]');
     const loader = document.getElementById('loader');
+    const counters = document.querySelectorAll('[data-count]');
 
     if (toggle && menu) {
         toggle.addEventListener('click', () => {
@@ -71,5 +72,31 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(() => loader.remove(), 450);
             }, 800);
         });
+    }
+
+    // Simple count-up animation
+    if (counters.length) {
+        const animateCounters = () => {
+            counters.forEach((el) => {
+                const target = Number(el.dataset.count || 0);
+                let current = 0;
+                const step = Math.max(1, Math.floor(target / 60));
+                const tick = () => {
+                    current += step;
+                    if (current >= target) {
+                        el.textContent = target;
+                    } else {
+                        el.textContent = current;
+                        requestAnimationFrame(tick);
+                    }
+                };
+                requestAnimationFrame(tick);
+            });
+        };
+        if (document.readyState === 'complete') {
+            animateCounters();
+        } else {
+            window.addEventListener('load', animateCounters);
+        }
     }
 });

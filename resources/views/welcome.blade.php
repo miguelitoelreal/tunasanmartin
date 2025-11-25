@@ -83,16 +83,16 @@
                 </div>
                 <div class="statbar" style="margin-top: 18px;">
                     <div class="stat">
-                        <div class="stat__value">+45</div>
+                        <div class="stat__value" data-count="45">0</div>
                         <div class="stat__label">Años de tradición</div>
                     </div>
                     <div class="stat">
-                        <div class="stat__value">+100</div>
+                        <div class="stat__value" data-count="100">0</div>
                         <div class="stat__label">Integrantes activos</div>
                     </div>
                     <div class="stat">
-                        <div class="stat__value">6</div>
-                        <div class="stat__label">Premios destacados</div>
+                        <div class="stat__value" data-count="50">0</div>
+                        <div class="stat__label">Premios ganados</div>
                     </div>
                 </div>
             </section>
@@ -249,86 +249,6 @@
                     </div>
                 </section>
 
-                <section class="section" id="historia">
-                    <div class="section__head">
-                        <div>
-                            <div class="section__eyebrow">Línea de tiempo</div>
-                            <h2 class="section__title">Historia</h2>
-                        </div>
-                    </div>
-                    <div class="timeline">
-                        <div class="timeline__item" data-animate>
-                            <h4 class="timeline__title">1979 · Fundación</h4>
-                            <div class="timeline__meta">Nace la Tuna de la USMP – Los Morados</div>
-                            <p class="timeline__body">Estudiantes fundan la agrupación para representar a la USMP con música tradicional.</p>
-                        </div>
-                        <div class="timeline__item" data-animate>
-                            <h4 class="timeline__title">2001 · Proyección internacional</h4>
-                            <div class="timeline__meta">Festivales en Chile y España</div>
-                            <p class="timeline__body">Compartimos escenario con tunas históricas, consolidando el estilo morado.</p>
-                        </div>
-                        <div class="timeline__item" data-animate>
-                            <h4 class="timeline__title">2014 · Distinción USMP</h4>
-                            <div class="timeline__meta">Reconocimiento institucional</div>
-                            <p class="timeline__body">La universidad nos reconoce como embajadores culturales en ceremonias académicas.</p>
-                        </div>
-                        <div class="timeline__item" data-animate>
-                            <h4 class="timeline__title">2024 · Gira morada</h4>
-                            <div class="timeline__meta">Cusco y Arequipa</div>
-                            <p class="timeline__body">Repertorio renovado con arreglos contemporáneos y nuevos integrantes.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="section" id="eventos">
-                    <div class="section__head">
-                        <div>
-                            <div class="section__eyebrow">Agenda</div>
-                            <h2 class="section__title">Eventos</h2>
-                        </div>
-                        <span class="pill">Serenatas · Encuentros · Protocolo</span>
-                    </div>
-                    <div class="grid grid--3">
-                        <div class="panel event-card" data-animate>
-                            <h4>Noche de Gala Morada</h4>
-                            <p class="panel__desc">Auditorio USMP · 15 diciembre · 8:00 p.m. Repertorio polifónico y solistas.</p>
-                        </div>
-                        <div class="panel event-card" data-animate>
-                            <h4>Serenata Tradicional</h4>
-                            <p class="panel__desc">Lima · Viernes · 9:00 p.m. Pasodobles, boleros y vals criollo personalizados.</p>
-                        </div>
-                        <div class="panel event-card" data-animate>
-                            <h4>Encuentro Nacional de Tunas</h4>
-                            <p class="panel__desc">Huancayo · Febrero 2026. Competencia y hermandad con tunas peruanas.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="section" id="reconocimientos">
-                    <div class="section__head">
-                        <div>
-                            <div class="section__eyebrow">Logros</div>
-                            <h2 class="section__title">Reconocimientos</h2>
-                        </div>
-                    </div>
-                    <div class="awards">
-                        <div class="panel award" data-animate>
-                            <h4>Mejor Tuna Universitaria</h4>
-                            <span>Festival Internacional de Tunas · Viña del Mar</span>
-                            <p class="panel__desc">Mejor interpretación vocal y puesta en escena.</p>
-                        </div>
-                        <div class="panel award" data-animate>
-                            <h4>Premio a la Mejor Ronda</h4>
-                            <span>Encuentro Nacional de Tunas · Arequipa</span>
-                            <p class="panel__desc">Ronda tradicional con arreglos propios y guitarras solistas.</p>
-                        </div>
-                        <div class="panel award" data-animate>
-                            <h4>Reconocimiento Institucional</h4>
-                            <span>Universidad de San Martín de Porres</span>
-                            <p class="panel__desc">Embajadores culturales en ceremonias académicas.</p>
-                        </div>
-                    </div>
-                </section>
 
                 <section class="section" id="contacto">
                     <div class="section__head">
