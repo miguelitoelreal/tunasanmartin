@@ -98,10 +98,10 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         };
 
+        // Ensure it always runs
+        window.addEventListener('load', animateCounters);
         if (document.readyState === 'complete') {
             animateCounters();
-        } else {
-            window.addEventListener('load', animateCounters);
         }
     }
 });
