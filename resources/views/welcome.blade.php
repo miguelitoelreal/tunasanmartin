@@ -7,7 +7,8 @@
     <title>Tuna USMP - Los Morados</title>
     <meta name="description" content="Tuna de la Universidad de San Martín de Porres - Los Morados. Música, tradición y hermandad.">
     <link rel="icon" href="/images/mascota.png" type="image/png">
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link rel="stylesheet" href="/build/assets/app-DuTGWVwg.css">
+    <script type="module" src="/build/assets/app-CgPtbZHn.js"></script>
 </head>
 
 <body>
