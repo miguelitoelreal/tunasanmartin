@@ -33,6 +33,14 @@ if ! grep -q "^SESSION_DRIVER=" .env; then
     echo "SESSION_DRIVER=file" >> .env
 fi
 
+# Default APP_ENV/DEBUG to production/off if not set
+if ! grep -q "^APP_ENV=" .env; then
+    echo "APP_ENV=production" >> .env
+fi
+if ! grep -q "^APP_DEBUG=" .env; then
+    echo "APP_DEBUG=false" >> .env
+fi
+
 # Run migrations to ensure sessions table exists when using sqlite
 php artisan migrate --force || true
 
