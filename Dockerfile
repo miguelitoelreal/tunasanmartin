@@ -4,6 +4,7 @@ WORKDIR /app
 COPY package.json package-lock.json* ./
 RUN npm install
 COPY vite.config.js ./
+COPY public public
 COPY resources resources
 RUN npm run build
 
@@ -33,4 +34,4 @@ ENV PORT=8000
 EXPOSE 8000
 
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["sh", "-c", "php artisan serve --host=0.0.0.0 --port=${PORT:-8000}"]
+CMD ["sh", "-c", "php -d variables_order=EGPCS -S 0.0.0.0:${PORT:-8000} -t public public/index.php"]
