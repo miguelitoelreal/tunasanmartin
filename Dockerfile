@@ -34,4 +34,4 @@ ENV PORT=8000
 EXPOSE 8000
 
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["sh", "-c", "php -d variables_order=EGPCS -S 0.0.0.0:${PORT:-8000} -t public public/index.php"]
+CMD ["sh", "-c", "php -d variables_order=EGPCS -S 0.0.0.0:${PORT:-8000} -t public server.php"]
