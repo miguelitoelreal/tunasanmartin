@@ -83,15 +83,15 @@
                 </div>
                 <div class="statbar" style="margin-top: 18px;">
                     <div class="stat">
-                        <div class="stat__value" data-count="45">0</div>
+                        <div class="stat__value">+45</div>
                         <div class="stat__label">Años de tradición</div>
                     </div>
                     <div class="stat">
-                        <div class="stat__value" data-count="100">0</div>
+                        <div class="stat__value">+100</div>
                         <div class="stat__label">Integrantes activos</div>
                     </div>
                     <div class="stat">
-                        <div class="stat__value" data-count="50">0</div>
+                        <div class="stat__value">+50</div>
                         <div class="stat__label">Premios ganados</div>
                     </div>
                 </div>

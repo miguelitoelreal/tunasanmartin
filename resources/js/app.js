@@ -74,34 +74,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Count-up animation (run once on load)
-    if (counters.length) {
-        const animateCounters = () => {
-            counters.forEach((el) => {
-                const target = parseInt(el.dataset.count || '0', 10);
-                if (!target || target <= 0) return;
-                const duration = 1500;
-                const start = performance.now();
-
-                const tick = (now) => {
-                    const progress = Math.min((now - start) / duration, 1);
-                    const value = Math.floor(progress * target);
-                    el.textContent = `+${value}`;
-                    if (progress < 1) {
-                        requestAnimationFrame(tick);
-                    } else {
-                        el.textContent = `+${target}`;
-                    }
-                };
-
-                requestAnimationFrame(tick);
-            });
-        };
-
-        // Ensure it always runs
-        window.addEventListener('load', animateCounters);
-        if (document.readyState === 'complete') {
-            animateCounters();
-        }
-    }
+    // Count-up removed; stats are static now
 });
